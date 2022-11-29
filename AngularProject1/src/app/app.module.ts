@@ -12,6 +12,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { CustmdirDirective } from './custmdir.directive';
+import { ChildCompComponent } from './child-comp/child-comp.component';
+import { ParentCompComponent } from './parent-comp/parent-comp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,9 @@ import { CustmdirDirective } from './custmdir.directive';
     DirectivesComponent,
     AttriComponent,
     CustdirDirective,
-    CustmdirDirective
+    CustmdirDirective,
+    ChildCompComponent,
+    ParentCompComponent
   ],
   imports: [
     BrowserModule,

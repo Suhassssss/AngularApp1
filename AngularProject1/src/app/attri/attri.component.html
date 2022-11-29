@@ -46,7 +46,7 @@
         </tbody>
     </table>
     <br><br>
-    <input type="text" #txtInput>
+    <input type="text" #txtInput (keyup.enter)="getInputValue(txtInput.value)">
     <button  (click)="getInputValue(txtInput.value)">Show</button>
     <p style="display: inline">{{textInput}}</p>
 

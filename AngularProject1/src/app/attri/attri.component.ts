@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-attri',
   templateUrl: './attri.component.html',
@@ -7,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AttriComponent implements OnInit {
+
+
 
 password:string="";
 cnfrmPassword:string="";
@@ -52,7 +53,12 @@ getInputValue(value){
 }
   constructor() { }
 
-  ngOnInit() {
+  firstName: string;
+  lastName: string;
+  siblings: Array<string>;
+  ngOnInit(){
+      this.firstName = 'John';
+      this.lastName = 'Doe';
+      this.siblings = new Array<string>('Jane', 'Jack', 'Sophie');
   }
-
 }

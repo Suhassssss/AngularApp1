@@ -1,0 +1,18 @@
+  <div class="childTable">
+        <table>
+            <tr>
+                <th>Employee Id</th>
+                <th>Employee Name</th>
+                <th>Employee Department</th>
+                <th>Employee Salary</th>
+                <th>Employee Company</th>
+            </tr>
+            <tr *ngFor="let employee of emp1">
+                <td>{{employee.empId}}</td>
+                <td>{{employee.empName}}</td>
+                <td>{{employee.empDept}}</td>
+                <td>{{employee.empSalary}}</td>
+                <td>{{employee.empCompany}}</td>
+            </tr>
+        </table>
+    </div>
