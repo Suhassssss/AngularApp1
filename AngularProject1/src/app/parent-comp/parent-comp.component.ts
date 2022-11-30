@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Employee } from "../models/employee";
-
+import { Customers } from '../models/customers';
 @Component({
   selector: 'app-parent-comp',
   templateUrl: './parent-comp.component.html',
@@ -14,11 +14,23 @@ export class ParentCompComponent implements OnInit {
     {empId: 4, empName: 'Aniket', empDept: 'HR', empSalary: '60000', empCompany: 'Infosys' },
     {empId: 5, empName: 'Sanket', empDept: 'Finance', empSalary: '70000', empCompany: 'Wipro' },
   ];
+  foods: string[] = [];
+  getDataFromChild(value){
+console.log(value);
+this.foods.push(value);
+  }
+ 
+customers: Customers[]=[];
+getCustomersData(value){
+  console.log("this is parent", this.customers.length);
+  console.log("this is parent", value);
+  this.customers.push(value);
+    
+}
 
   constructor() { }
 
   ngOnInit() {
-    
   }
 
 }
