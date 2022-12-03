@@ -14,6 +14,10 @@ import { CustdirDirective } from './custdir.directive';
 import { CustmdirDirective } from './custmdir.directive';
 import { ChildCompComponent } from './child-comp/child-comp.component';
 import { ParentCompComponent } from './parent-comp/parent-comp.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { HookChildComponent } from './hook-child/hook-child.component';
+import { DirassignComponent } from './dirassign/dirassign.component';
+import { RemoveRowComponent } from './remove-row/remove-row.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +31,11 @@ import { ParentCompComponent } from './parent-comp/parent-comp.component';
     CustdirDirective,
     CustmdirDirective,
     ChildCompComponent,
-    ParentCompComponent
+    ParentCompComponent,
+    HooksComponent,
+    HookChildComponent,
+    DirassignComponent,
+    RemoveRowComponent
   ],
   imports: [
     BrowserModule,

@@ -31,7 +31,6 @@ this.custMobile = "";
 this.custVehicle = "";
 this.custVehiNum = "";
 }
-i: number = 0;
 custDetails: Array<any>=[];
   addCustomer(valueA, valueB, valueC, valueD, valueE){
    let custDetail: Customers[]=[{custName: valueA, custMobile: valueB, custVehicle: valueC, 
@@ -43,7 +42,6 @@ custDetails: Array<any>=[];
    for (const iterator of this.custDetails) {
     
       console.table("Parent for loop",iterator[0]);
-    this.i = this.i + 1;
    }
   }
 
