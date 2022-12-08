@@ -1,15 +1,21 @@
-import { Component, OnInit, Input, SimpleChanges, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, SimpleChanges, OnChanges, AfterContentInit, OnDestroy } from '@angular/core';
 import { ClickEvent } from '../models/clickEvent';
 @Component({
   selector: 'app-hooks',
   templateUrl: './hooks.component.html',
   styleUrls: ['./hooks.component.css']
 })
-export class HooksComponent implements OnInit, OnChanges{
+export class HooksComponent implements OnInit, OnChanges, AfterContentInit, OnDestroy{
 //   @Input() userid: number;
 // pi;
   constructor() {
    }
+  ngOnDestroy(): void {
+    throw new Error('Method not implemented.');
+  }
+  ngAfterContentInit(): void {
+    throw new Error('Method not implemented.');
+  }
 countValue:number=0;
 btnValue: string = "Show";
 clickEvent: Array<any> = [];

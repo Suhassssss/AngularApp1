@@ -46,8 +46,13 @@
         </tbody>
     </table>
     <br><br>
-    <input type="text" #txtInput (keyup.enter)="getInputValue(txtInput.value)">
+    <input type="text" [(ngModel)]="txt"  #txtInput (keyup)="getInputValue(txtInput.value)">
     <button  (click)="getInputValue(txtInput.value)">Show</button>
     <p style="display: inline">{{textInput}}</p>
-
-    <app-directives [myinputMsg]="textInput"></app-directives>
+    <button class="btn btn-danger" (click)="newHookExists()">Destroy</button>
+    <!-- <app-directives [myinputMsg]="textInput"></app-directives> -->
+    <app-newhooks *ngIf="newHookExist" [myinputMsg]="txt" (myEvent)="getDataFromChild($event)"> 
+        <h2 #attrih2 >attri content</h2>
+        <p #para>paragraph</p>
+    </app-newhooks>
+    

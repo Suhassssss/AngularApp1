@@ -18,6 +18,11 @@ import { HooksComponent } from './hooks/hooks.component';
 import { HookChildComponent } from './hook-child/hook-child.component';
 import { DirassignComponent } from './dirassign/dirassign.component';
 import { RemoveRowComponent } from './remove-row/remove-row.component';
+import { NewhooksComponent } from './newhooks/newhooks.component';
+import { SimpleTemplateformComponent } from './simple-templateform/simple-templateform.component';
+import { PracticechildComponent } from './practicechild/practicechild.component';
+import { PracticeparentComponent } from './practiceparent/practiceparent.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +40,12 @@ import { RemoveRowComponent } from './remove-row/remove-row.component';
     HooksComponent,
     HookChildComponent,
     DirassignComponent,
-    RemoveRowComponent
+    RemoveRowComponent,
+    NewhooksComponent,
+    SimpleTemplateformComponent,
+    PracticechildComponent,
+    PracticeparentComponent,
+    TemplateFormComponent
   ],
   imports: [
     BrowserModule,

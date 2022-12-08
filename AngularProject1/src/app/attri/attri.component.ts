@@ -6,8 +6,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class AttriComponent implements OnInit {
-
-
+txt: string = "red";
+newHookExist: boolean = true;
+newHookExists(){
+  if (this.newHookExist==true) {
+    this.newHookExist= false;
+  } else {
+    this.newHookExist = true;
+  }
+}
+eventValue: string;
 
 password:string="";
 cnfrmPassword:string="";
@@ -23,7 +31,12 @@ isPassMatched(){
     this.msg='Password missmatch';
   }
 }
-
+getDataFromChild(value){
+  this.eventValue = value;
+  console.log("This is new hook component value passed to attri component", value);
+  console.log("This is new hook component value passed to attri component", this.eventValue);
+  
+}
 colorVal = 'yellow';
 people:any[]=[
   {

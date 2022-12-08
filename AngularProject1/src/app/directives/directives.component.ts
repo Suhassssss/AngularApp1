@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, SimpleChanges } from '@angular/core';
 import {Input } from '@angular/core';
 import { Education } from '../models/education';
 @Component({
@@ -29,6 +29,14 @@ export class DirectivesComponent implements OnInit {
     this.selectedOption = valuee.target.value;
   }
   constructor() { }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   throw new Error('Method not implemented.');
+  // }
+  // ngOnChanges(changes: SimpleChanges): void {
+  //   // throw new Error('Method not implemented.');
+  //   console.log("ngOnchanges called");
+    
+  // }
 
   ngOnInit() {
     console.log("value from parent: ",this.myinputMsg);

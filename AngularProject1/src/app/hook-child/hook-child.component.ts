@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges } from '@angular/core';
+import { Component, OnInit, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { ClickEvent } from '../models/clickEvent';
 
 @Component({
@@ -6,12 +6,15 @@ import { ClickEvent } from '../models/clickEvent';
   templateUrl: './hook-child.component.html',
   styleUrls: ['./hook-child.component.css']
 })
-export class HookChildComponent implements OnInit {
+export class HookChildComponent implements OnInit, OnChanges {
 
   // @Output() colorEvent: EventEmitter<number> = new EventEmitter<number>();
 @Input() countValue: number;
 @Input() clickEventValue: any[];
   constructor() { }
+  ngOnChanges(changes: SimpleChanges): void {
+    throw new Error('Method not implemented.');
+  }
 event: ClickEvent[]=[];
   ngOnInit() {
     
